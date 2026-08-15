@@ -3,6 +3,9 @@ services:
     build: .
     ports: ["3000:3000"]
     env_file: .env
-    volumes: ["news-data:/app/data"]
+    volumes:
+      - news-data:/app/data
+      - news-uploads:/app/public/uploads
 volumes:
   news-data:
+  news-uploads:
